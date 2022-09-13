@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+referat2.txt
+export.csv
+
 # C extensions
 *.so
 
