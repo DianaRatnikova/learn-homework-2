@@ -12,6 +12,11 @@ https://www.dropbox.com/s/sipsmqpw1gwzd37/referat.txt?dl=0
 5. Сохраните результат в файл referat2.txt
 """
 
+import logging
+
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
+
 
 def main():
     with open('referat.txt', 'r', encoding='utf-8') as file_referat:
@@ -21,13 +26,8 @@ def main():
 
     with open('referat2.txt', 'w', encoding='utf-8') as file_referat2:
         file_referat2.write(str_replaced)
-        print("Новый файл создан")
 
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    logging.info("Новый файл создан")
 
 
 if __name__ == "__main__":
