@@ -13,23 +13,17 @@ name, age и job и значениями по вашему выбору.
 
 import csv
 
-list_of_dict = [{'name': 'Tom', 'age': 28, 'job': 'Engineer'},
-                {'name': 'Ann', 'age': 30, 'job': 'SW developer'},
-                {'name': 'Max', 'age': 21, 'job': 'Student'},
-                ]
+list_of_workers = [{'name': 'Tom', 'age': 28, 'job': 'Engineer'},
+                   {'name': 'Ann', 'age': 30, 'job': 'SW developer'},
+                   {'name': 'Max', 'age': 21, 'job': 'Student'}, ]
 
 
 def main():
+    keys = ['name', 'age', 'job']
     with open('export.csv', 'w', encoding='utf-8', newline='') as file_to_create:
-        keys = ['name', 'age', 'job']
         writer = csv.DictWriter(file_to_create, keys, delimiter=';')
         writer.writeheader()
-        writer.writerows(list_of_dict)
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+        writer.writerows(list_of_workers)
 
 
 if __name__ == "__main__":
